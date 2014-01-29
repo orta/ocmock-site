@@ -122,7 +122,7 @@ If Objective-C blocks are available a block can be used to handle the invocation
 
 <h2>Partial mocks</h2>
 <pre><code>id aMock = [OCMockObject partialMockForObject:anObject]</code></pre>
-<p>Creates a mock object that can be used in the same way as <i>anObject</i>. When a method that is not stubbed is invoked it will be forwarded to <i>anObject</i>. When a stubbed method is invoked using a reference to <i>anObject</i>, rather than the mock, it will still be handled by the mock.</p>
+<p>Creates a mock object that can be used in the same way as <i>anObject</i>. When a method that is not stubbed is invoked it will be forwarded to <i>anObject</i>. When a stubbed method is invoked using a reference to the original <i>anObject</i>, rather than the mock, it will <b>still</b> be handled by the mock.</p>
 
 <p>The real object can be returned to its original state, i.e. all stubs will be removed:
 <pre><code>[aMock stopMocking]</code></pre>
